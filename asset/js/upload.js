@@ -1,6 +1,6 @@
 const BASE_URL = window.location.origin;
 $.fn.fileinput.defaults.language = 'zh';
-let $smfile = $("#files");
+let $smfile = $("#file");
 $smfile.fileinput({
     // theme: 'fas',
     uploadUrl: BASE_URL + '/upload',
