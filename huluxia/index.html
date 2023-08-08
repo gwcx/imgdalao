@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>葫芦侠免费图床 - 大佬图床</title>
+    <link rel="shortcut icon" href="https://img.dalao.pro/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/layui/2.6.8/css/layui.min.css">
+    <link rel="stylesheet" href="https://img.dalao.pro/huluxia/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+            <legend style="font-weight: bold;">葫芦侠免费图床 - 大佬图床</legend>
+        </fieldset>
+        <blockquote class="layui-elem-quote" style="margin: 0 25px;">
+            <span class="layui-badge-dot"></span>文件格式为PNG，JPG<br>
+        </blockquote>
+        <div class="Teacher-up">
+            <div class="layui-upload-drag" id="multiple">
+                <i class="layui-icon layui-icon-upload"></i>
+                <p>点击或者拖拽文件到此处上传</p>
+            </div>
+            <input type="file" id="xf-file" name="file" accept="image/*" style="display: none;">
+
+            <div class="layui-row">
+                <div class="layui-col-lg12" id="resultshow" v-show="showResult">
+                    <div class="layui-col-lg4" id="imgshow" v-show="showImage">
+                        <div id="img-thumb"><a href="JavaScript:;" title="点此查看大图" class="xf-PicBlackbox bigPic" data-text="picture"><img alt="loading"></a></div>
+                    </div>
+                    <div class="layui-col-lg7 layui-col-md-offset1">
+                        <div id="links">
+                            <table class="layui-table" lay-size="sm" lay-skin="nob">
+                                <tbody>
+                                    <tr v-for="item in items" :key="item.label">
+                                        <td>{{ item.label }}</td>
+                                        <td><input type="text" class="layui-input" v-model="item.value"></td>
+                                        <td><a href="javascript:;" class="layui-btn layui-btn-sm copy-btn" @click="copyItem(item)" v-text="copyText"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <blockquote class="layui-elem-quote" style="margin-top: 30px;">
+                <p>葫芦侠CDN最近设置了图片防盗链，<span style="color: red">得在&lt;/head&gt;上添加一行这个代码: &lt;meta name="referrer" content="never"&gt;</span></p>
+            </blockquote>
+            <div class="layui-footer footer layui-col-xs12">
+                <p class="xf-footer">© 2023 <a href="https://www.dalao.pro/" tppabs="https://www.dalao.pro/">大佬博客</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/layui/2.6.0/layui.min.js"></script>
+    <script src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script src="https://player.xfyun.club/js/xf-Picture-Blackbox/xf-PictureBlackbox.min.js"></script>
+    <script src="https://img.dalao.pro/huluxia/index.js"></script>
+</body>
+
+</html>
