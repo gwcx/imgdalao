@@ -1,6 +1,6 @@
 const BASE_URL = window.location.origin;
 $.fn.fileinput.defaults.language = 'zh';
-let $smfile = $("#file");
+let $smfile = $("#upFiles");
 $smfile.fileinput({
     // theme: 'fas',
     uploadUrl: BASE_URL + '/upload',
@@ -15,7 +15,7 @@ $smfile.fileinput({
         return dataObj;
     },
     // allowedFileExtensions: ['jpeg', 'jpg', 'png', 'gif', 'bmp', 'webp'],
-    allowedFileExtensions: ['jpeg', 'jpg', 'png', 'gif', 'bmp', 'mp4', 'mov', 'avi'],
+    allowedFileExtensions: ['jpeg', 'jpg', 'png', 'gif', 'bmp', 'mp4', 'mov', 'avi', 'webp', 'css', 'js'],
     overwriteInitial: false,
     previewFileType: "image",
     maxFileSize: '5120',
