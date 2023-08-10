@@ -43,14 +43,14 @@ export async function onRequest(context) {  // Contents of context object
                     if(typeof request.headers.get('Referer') == "undefined" ||request.headers.get('Referer') == null || request.headers.get('Referer') == ""){
                         return Response.redirect(url.origin+"/block-img.html", 302)
                     }else{
-                        return Response.redirect("https://static-res.pages.dev/teleimage/img-block-compressed.png", 302)
+                        return Response.redirect("https://img.dalao.pro/asset/image/img-block-compressed.png", 302)
                     }
 
                 }else if (record.metadata.Label=="adult"){
                     if(typeof request.headers.get('Referer') == "undefined" ||request.headers.get('Referer') == null || request.headers.get('Referer') == ""){
                         return Response.redirect(url.origin+"/block-img.html", 302)
                     }else{
-                        return Response.redirect("https://static-res.pages.dev/teleimage/img-block-compressed.png", 302)
+                        return Response.redirect("https://img.dalao.pro/asset/image/img-block-compressed.png", 302)
                     }
                 }
                 //check if the env variables WhiteList_Mode are set
